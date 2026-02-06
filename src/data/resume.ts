@@ -1,0 +1,196 @@
+export const resumeData = {
+  name: "Pavan Sai Sasidhar Appalla",
+  initials: "PA",
+  title: "Data Science & Full Stack Engineer",
+  location: "Raleigh, NC",
+  locationLink: "https://www.google.com/maps/place/Raleigh,+NC",
+  about:
+    "Computer Science graduate student actively engaged in Data Science and Full Stack Engineering. Proven experience architecting centralized clinical data platforms and developing real-time malware detection systems. Certified Ethical Hacker (CEH) with strong expertise in cloud infrastructure (AWS, Docker), machine learning pipelines, and secure web application development.",
+  summary:
+    "Computer Science graduate student actively engaged in Data Science and Full Stack Engineering. Proven experience architecting centralized clinical data platforms and developing real-time malware detection systems. Certified Ethical Hacker (CEH) with strong expertise in cloud infrastructure (AWS, Docker), machine learning pipelines, and secure web application development.",
+  avatarUrl: "https://github.com/sasidharappalla.png",
+  personalWebsiteUrl: "https://sasidhar-portfolio.vercel.app",
+  contact: {
+    email: "sasidharapalla@gmail.com",
+    tel: "+1 984-381-0810",
+    social: [
+      {
+        name: "GitHub",
+        url: "https://github.com/sasidharappalla",
+        icon: "github",
+      },
+      {
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/sasidhar-appalla",
+        icon: "linkedin",
+      },
+      {
+        name: "X",
+        url: "https://x.com/sasidhar_appalla",
+        icon: "twitter",
+      },
+    ],
+  },
+  education: [
+    {
+      school: "North Carolina State University",
+      degree: "Master of Science in Computer Science",
+      start: "Aug 2024",
+      end: "Present",
+      gpa: "3.56/4.0",
+    },
+    {
+      school: "Gandhi Institute of Technology And Management",
+      degree: "B.Tech in Computer Science and Engineering (Cyber-Security)",
+      start: "2020",
+      end: "2024",
+      gpa: "8.65/10",
+    },
+  ],
+  work: [
+    {
+      company: "Rygen BioPharma, India",
+      badges: [],
+      href: "",
+      location: "India",
+      title: "Data Science Engineer",
+      logoUrl: "",
+      start: "Mar 2023",
+      end: "Aug 2024",
+      description:
+        "Architected a centralized full-stack web application using Flask and React.js, designing robust REST APIs to streamline clinical data reporting and significantly improve data accuracy. Engineered automated data analysis pipelines utilizing Python libraries including pandas, NumPy, and scikit-learn to accelerate the extraction of actionable clinical insights. Designed and maintained scalable cloud infrastructure on AWS using Docker and PostgreSQL, ensuring high availability and reliability for critical research datasets. Developed interactive, real-time dashboards in Tableau and Power BI to visualize complex metrics, facilitating data-driven decision-making and boosting research team engagement. Established Agile development practices and CI/CD workflows, utilizing Git for version control to optimize the software development lifecycle and delivery speed.",
+    },
+    {
+      company: "ISRO-National Remote Sensing Center",
+      badges: [],
+      href: "https://www.nrsc.gov.in/",
+      location: "India",
+      title: "Student Intern",
+      logoUrl: "/isro.png",
+      start: "Jun 2023",
+      end: "Aug 2023",
+      description:
+        "Gained hands-on experience in remote sensing techniques, data acquisition, and satellite imagery analysis. Applied Digital Image Processing (DIP) techniques for image enhancement, classification, and feature extraction; assisted in analyzing geospatial data for environmental and urban studies.",
+    },
+  ],
+  skills: [
+    "Python",
+    "C++",
+    "Java",
+    "GoLang",
+    "TypeScript",
+    "JavaScript",
+    "SQL",
+    "Bash",
+    "HTML/CSS",
+    "scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Computer Vision",
+    "Neural Networks",
+    "Matplotlib",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "Django",
+    "Flask",
+    "Spring Boot",
+    "GraphQL",
+    "gRPC",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "Git",
+    "CI/CD",
+    "Kafka",
+    "RabbitMQ",
+    "Ansible",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "Scylla",
+    "Redis",
+    "Burp Suite",
+    "Nmap",
+    "Nikto",
+    "Selenium",
+    "Tableau",
+    "Power BI",
+    "Unity",
+    "JIRA",
+    "OPENXR",
+  ],
+  projects: [
+    {
+      title: "Malware Detection System",
+      techStack: ["Machine Learning", "Python"],
+      description:
+        "Engineered a real-time ML system to detect Windows malware, utilizing adaptive algorithms and feature engineering to mitigate zero-day threats.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/sasidharappalla", 
+      },
+      start: "Sep 2023",
+      end: "Sep 2023", 
+    },
+    {
+      title: "CineScout",
+      techStack: ["Django", "JavaScript", "MongoDB", "Flask"],
+      description:
+        "Built a collaborative filtering recommendation engine using Python and Flask; integrated user feedback and automated email notifications for personalized movie suggestions.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/sasidharappalla",
+      },
+      start: "Aug 2024",
+      end: "Oct 2024",
+    },
+    {
+      title: "IoT Sensor Networks",
+      techStack: ["Raspberry Pi", "MQTT", "Tailscale", "Cloud"],
+      description:
+        "Smart Home: Developed an MQTT-based sensor network using Raspberry Pis networked via Tailscale, interfaced with LDR and potentiometer to control LED states. Door Security: Implemented an IMU-based door event detection system with Tailscale-secured cloud classification for real-time door open/close status updates.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/sasidharappalla",
+      },
+      start: "Early 2025",
+      end: "Early 2025",
+    },
+    {
+      title: "Wildfire Detection",
+      techStack: ["IoT", "LoRaWAN", "Cloud Integration"],
+      description:
+        "Designed an IoT-based wildfire detection system leveraging infrared, gas, humidity, and temperature sensors; employed solar-powered sensor nodes and wireless communication (LoRaWAN) for real-time alerts.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/sasidharappalla",
+      },
+      start: "Spring 2025",
+      end: "Spring 2025",
+    },
+    {
+      title: "Chimera (VR → AR)",
+      techStack: ["Unity URP", "C#", "OpenXR", "Meta Quest"],
+      description:
+        "Engineered an embodied “Absorb → Preview → Paint” workflow using raycast sampling and transparent overlays to facilitate precise texture application. Developed a robust state management system with JSON serialization to enable persistent Save/Load functionality and a comprehensive Undo/Redo history. Designed a unified architecture compatible with AR passthrough and established a rigorous evaluation framework (SUS, NASA-TLX) to benchmark usability against standard menu baselines.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/sasidharappalla",
+      },
+      start: "Aug 2025",
+      end: "Dec 2025",
+    },
+  ],
+  publications: [
+    {
+      title: "Detecting Malware in The Age of AI",
+      journal: "IJIRT 2024",
+      authors: "A. Pavan Sai Sasidhar et al.",
+      description: "Optimized adaptive algorithms for anomaly detection.",
+      link: "https://github.com/sasidharappalla", 
+    }
+  ]
+} as const;
