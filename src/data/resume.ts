@@ -16,18 +16,13 @@ export const resumeData = {
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/sasidharappalla",
+        url: "https://github.com/sasidharappalla?tab=repositories",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/sasidhar-appalla",
+        url: "https://www.linkedin.com/in/sasidhar-appalla-a00b2b200/",
         icon: "linkedin",
-      },
-      {
-        name: "X",
-        url: "https://x.com/sasidhar_appalla",
-        icon: "twitter",
       },
     ],
   },
@@ -130,10 +125,10 @@ export const resumeData = {
         "Engineered a real-time ML system to detect Windows malware, utilizing adaptive algorithms and feature engineering to mitigate zero-day threats.",
       link: {
         label: "GitHub",
-        href: "https://github.com/sasidharappalla", 
+        href: "https://github.com/sasidharappalla?tab=repositories",
       },
       start: "Sep 2023",
-      end: "Sep 2023", 
+      end: "Sep 2023",
     },
     {
       title: "CineScout",
@@ -142,7 +137,7 @@ export const resumeData = {
         "Built a collaborative filtering recommendation engine using Python and Flask; integrated user feedback and automated email notifications for personalized movie suggestions.",
       link: {
         label: "GitHub",
-        href: "https://github.com/sasidharappalla",
+        href: "https://github.com/sasidharappalla?tab=repositories",
       },
       start: "Aug 2024",
       end: "Oct 2024",
@@ -154,7 +149,7 @@ export const resumeData = {
         "Smart Home: Developed an MQTT-based sensor network using Raspberry Pis networked via Tailscale, interfaced with LDR and potentiometer to control LED states. Door Security: Implemented an IMU-based door event detection system with Tailscale-secured cloud classification for real-time door open/close status updates.",
       link: {
         label: "GitHub",
-        href: "https://github.com/sasidharappalla",
+        href: "https://github.com/sasidharappalla?tab=repositories",
       },
       start: "Early 2025",
       end: "Early 2025",
@@ -166,7 +161,7 @@ export const resumeData = {
         "Designed an IoT-based wildfire detection system leveraging infrared, gas, humidity, and temperature sensors; employed solar-powered sensor nodes and wireless communication (LoRaWAN) for real-time alerts.",
       link: {
         label: "GitHub",
-        href: "https://github.com/sasidharappalla",
+        href: "https://github.com/sasidharappalla?tab=repositories",
       },
       start: "Spring 2025",
       end: "Spring 2025",
@@ -178,7 +173,7 @@ export const resumeData = {
         "Engineered an embodied “Absorb → Preview → Paint” workflow using raycast sampling and transparent overlays to facilitate precise texture application. Developed a robust state management system with JSON serialization to enable persistent Save/Load functionality and a comprehensive Undo/Redo history. Designed a unified architecture compatible with AR passthrough and established a rigorous evaluation framework (SUS, NASA-TLX) to benchmark usability against standard menu baselines.",
       link: {
         label: "GitHub",
-        href: "https://github.com/sasidharappalla",
+        href: "https://github.com/sasidharappalla?tab=repositories",
       },
       start: "Aug 2025",
       end: "Dec 2025",
@@ -190,7 +185,7 @@ export const resumeData = {
       journal: "IJIRT 2024",
       authors: "A. Pavan Sai Sasidhar et al.",
       description: "Optimized adaptive algorithms for anomaly detection.",
-      link: "https://github.com/sasidharappalla", 
+      link: "https://github.com/sasidharappalla?tab=repositories",
     }
   ]
 } as const;

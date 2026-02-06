@@ -30,24 +30,7 @@ const Footer = () => {
                         })}
                     </div>
 
-                    <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                        <div className="font-bold text-[16px] mb-4 text-white">Social Media</div>
-                        {resumeData.contact.social.map((social) => {
-                            if (social.name !== "X") return null;
-                            return (
-                                <a
-                                    key={social.name}
-                                    href={social.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex flex-row items-center my-[10px] cursor-pointer hover:text-[#7042f8] transition-colors"
-                                >
-                                    <Twitter size={18} />
-                                    <span className="text-[15px] ml-[6px]">Twitter (X)</span>
-                                </a>
-                            )
-                        })}
-                    </div>
+
 
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px] mb-4 text-white">About</div>
