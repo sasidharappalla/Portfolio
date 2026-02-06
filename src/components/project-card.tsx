@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, Globe, ExternalLink, Code } from "lucide-react";
+import { Code } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
@@ -120,14 +120,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             ))}
                         </div>
 
-                        <div className="flex gap-2 w-full mt-2 pt-4 border-t border-white/5">
-                            <Button asChild variant="ghost" size="sm" className="flex-1 hover:bg-primary/10 hover:text-primary text-xs font-mono uppercase tracking-wider group/btn">
-                                <a href={project.link.href} target="_blank" rel="noopener noreferrer">
-                                    <Globe className="mr-2 size-3 group-hover/btn:rotate-12 transition-transform" />
-                                    {project.link.label}
-                                </a>
-                            </Button>
-                        </div>
+
 
                         {/* Corner Markers */}
                         <div className="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-primary/30 opacity-0 group-hover:opacity-100 transition-opacity" />
