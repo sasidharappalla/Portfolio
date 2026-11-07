@@ -1,23 +1,165 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Design tokens: warm paper, ink, one vermilion signal. Everything references these. */
+:root {
+  --paper: #f2eee6;
+  --paper-deep: #e9e3d7;
+  --ink: #15130f;
+  --ink-soft: #4a453c;
+  --ink-faint: #6b6458;
+  --rule: rgb(21 19 15 / 0.14);
+  --rule-strong: rgb(21 19 15 / 0.32);
+  --signal: #d4441c;
+  --signal-ink: #a8320f; /* signal dark enough for small text on paper */
+  --night: #131210;
+  --night-rule: rgb(242 238 230 / 0.16);
+  --night-soft: #b9b2a5;
 }
 
-:root {
-  --background: #030014;
-  /* Deep Space Black */
-  --foreground: #ffffff;
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
+  --color-night: var(--night);
+  --color-night-rule: var(--night-rule);
+  --color-night-soft: var(--night-soft);
+
+  --font-display: var(--font-instrument-serif), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-schibsted), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-sans);
+  background: var(--paper);
   overflow-x: hidden;
 }
 
-/* Scrollbar Hide */
-::-webkit-scrollbar {
-  width: 0px;
+::selection {
+  background: var(--signal);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Paper grain: a fixed SVG noise layer, very low opacity, never intercepts clicks. */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Mono micro-labels used for all metadata */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Underline that draws in from the left on hover */
+.draw {
+  background-image: linear-gradient(var(--signal), var(--signal));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.45s cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+.draw:hover,
+.draw:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* ---------- Motion: one entrance sequence + scroll reveals ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(212 68 28 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(212 68 28 / 0);
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) forwards;
+  animation-delay: var(--d, 0ms);
+}
+
+.bar {
+  transform-origin: left;
+  animation: fill 1.4s cubic-bezier(0.2, 0.7, 0.1, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.live-dot {
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.7, 0.1, 1),
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.1, 1);
+  transition-delay: var(--d, 0ms);
+}
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .bar,
+  .live-dot {
+    animation: none;
+    opacity: 1;
+  }
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
