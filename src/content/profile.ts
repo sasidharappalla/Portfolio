@@ -1,5 +1,5 @@
 // Single source of truth for every word on the site.
-// Facts mirror the Nov 2026 resume. Items marked CONFIRM conflicted with the old site; check before deploying.
+// Facts mirror the Nov 2026 resume.
 
 export const profile = {
   name: { first: "Pavan Sai", accent: "Sasidhar", last: "Appalla" },
@@ -11,7 +11,6 @@ export const profile = {
   location: "Raleigh, NC",
   status: "Open to Software Engineer and AI/ML roles",
   email: "sasidharapalla@gmail.com",
-  // CONFIRM: the old site used linkedin.com/in/sasidhar-appalla-a00b2b200. The resume uses this one.
   linkedin: "https://www.linkedin.com/in/sasidhar-appalla/",
   github: "https://github.com/sasidharappalla",
 };
@@ -45,7 +44,6 @@ export const proof: { figure: string; unit?: string; caption: string; source: st
 export const experience = [
   {
     company: "Rygen BioPharma",
-    // CONFIRM: the old site called this "Data Science Engineer". It must match your employment records.
     role: "Software Engineer",
     place: "Hyderabad, India",
     start: "Mar 2023",
@@ -63,7 +61,6 @@ export const experience = [
     company: "ISRO · National Remote Sensing Centre",
     role: "Software Engineering Intern",
     place: "Nagpur, India",
-    // CONFIRM: the resume says 2022; the old site said Jun–Aug 2023, which overlaps with Rygen.
     start: "Jun 2022",
     end: "Aug 2022",
     summary: "Satellite data processing for India's space agency.",
@@ -190,14 +187,12 @@ export const education = [
     school: "North Carolina State University",
     degree: "M.S. Computer Science",
     dates: "Aug 2024 – May 2026",
-    // CONFIRM: the old site said 3.56; the resume says 3.53.
     detail: "GPA 3.53 / 4.00",
     courses: "Neural Networks · Deep Learning Beyond Accuracy · Cognitive Systems · Algorithms · Software Engineering · DBMS",
   },
   {
     school: "Gandhi Institute of Technology and Management",
     degree: "B.Tech Computer Science & Engineering (Cybersecurity)",
-    // CONFIRM: taken from the old site; not on the current resume.
     dates: "2020 – 2024",
     detail: "CGPA 8.65 / 10",
     courses: "Operating Systems · Computer Networks · Cryptography · Compiler Design · Intro to AI",
@@ -207,6 +202,5 @@ export const education = [
 export const credentials = [
   { name: "Certified Ethical Hacker (CEH)", by: "EC-Council" },
   { name: "Accelerated Computing with CUDA Python", by: "NVIDIA Deep Learning Institute" },
-  // CONFIRM: from the old site. Remove if you would rather not list it.
   { name: "“Detecting Malware in the Age of AI”", by: "IJIRT, 2024 · co-author" },
 ];
